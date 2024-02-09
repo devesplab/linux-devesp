@@ -1,0 +1,13 @@
+Container List 
+
+CONTAINER ID   IMAGE                     COMMAND                  CREATED        STATUS       PORTS                                              NAMES
+441e7d797b3c   dockio/u2204-devesp:1.0   "/usr/sbin/init slee…"   7 weeks ago    Up 2 weeks                                                      ubuntu2204-2-devesp
+31a3ff57a7ed   dockio/rhel9-devesp:1.0   "/usr/sbin/init slee…"   7 weeks ago    Up 2 weeks                                                      rhel9-1-devesp
+3ecf01524884   dockio/u2204-devesp:1.0   "/usr/sbin/init slee…"   7 weeks ago    Up 2 weeks                                                      ubuntu2204-1-devesp
+7a9432876d80   dockio/rhel9-devesp:1.0   "/usr/sbin/init slee…"   7 weeks ago    Up 2 weeks                                                      rhel9-2-devesp
+4cee66606768   dockio/rhel9-devesp:1.0   "/usr/sbin/init slee…"   3 months ago   Up 2 weeks                                                      jenkins-agent-rhel9-2
+7afa87953d9c   jenkins/jenkins:lts       "/usr/bin/tini -- /u…"   3 months ago   Up 2 weeks   0.0.0.0:8080->8080/tcp, 0.0.0.0:50000->50000/tcp   jenkins-cicd
+407a6554a208   dockio/u2204-devesp:1.0   "sleep infinity"         3 months ago   Up 2 weeks                                                      jenkins-agent-ubuntu-3
+23ebaa16afe3   dockio/u2204-devesp:1.0   "sleep infinity"         3 months ago   Up 2 weeks                                                      jenkins-agent-ubuntu-1
+b6148d4a3717   dockio/u2204-devesp:1.0   "sleep infinity"         3 months ago   Up 2 weeks                                                      jenkins-agent-ubuntu-2
+31cd2b4bccad   dockio/rhel9-devesp:1.0   "/usr/sbin/init slee…"   3 months ago   Up 2 weeks                                                      jenkins-agent-rhel9-1

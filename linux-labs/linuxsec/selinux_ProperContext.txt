@@ -1,0 +1,150 @@
+<!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
+----
+
+==Exercise 1
+
+CREATED: Fri Nov  2 12:55:37 PDT 2012
+
+[root@revserver ~]# httpd -version
+Server version: Apache/2.2.15 (Unix)
+Server built:   Feb 13 2012 22:25:23
+
+:::::::::::::::
+
+NOTE: This apache server is running in SSL mode on port 443.
+
+[root@revserver ~]# cat /etc/hosts
+127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
+#
+172.29.22.149 revserver.homeoffice.wal-mart.com revserver loghost svnserver
+[root@revserver ~]# 
+[root@revserver ~]# ifconfig
+eth0      Link encap:Ethernet  HWaddr 00:0C:29:8C:3C:AD  
+          inet addr:172.29.22.149  Bcast:172.29.23.255  Mask:255.255.254.0
+          inet6 addr: fe80::20c:29ff:fe8c:3cad/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:54206 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:26284 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:59132452 (56.3 MiB)  TX bytes:1835248 (1.7 MiB)
+          Interrupt:19 Base address:0x2024 
+[root@revserver ~]# 
+
+:::::::::::::::
+
+[root@revserver ~]# cat /etc/httpd/conf.d/ssltest.conf
+SSLMutex sem
+SSLRandomSeed startup builtin
+SSLSessionCache none
+
+ErrorLog /var/log/httpd/ssl_log 
+LogLevel info
+# You can later change "info" to "warn" if everything is OK
+
+Listen 443
+
+<VirtualHost revserver.homeoffice.wal-mart.com:443>
+
+        SSLEngine on
+        SSLProtocol -ALL +SSLv3 +TLSv1
+        SSLCipherSuite ALL:!ADH:RC4+RSA:+HIGH:+MEDIUM:-LOW:-SSLv2:-EXP
+
+        SSLCertificateFile	/etc/httpd/ssl/server.pem
+        SSLCertificateKeyFile	/etc/httpd/ssl/server.pem
+        SSLCACertificateFile	/etc/httpd/ssl/server.pem
+
+        # If Apache complains about invalid signatures on the CRL, you can try disabling
+        # CRL checking by commenting the next line, but this is not recommended.
+        SSLCARevocationFile	/etc/httpd/ssl/server.pem 
+
+        SSLVerifyClient optional
+        SSLVerifyDepth  1
+        SSLOptions +StdEnvVars
+
+	ServerName svnserver.homeoffice.wal-mart.com
+	DocumentRoot /var/www/html
+
+</VirtualHost>
+[root@revserver ~]# 
+
+
+[root@revserver ~]# netstat -plant | grep 443
+tcp        0      0 :::443      :::*       LISTEN      3467/httpd          
+
+:::::::::::::::
+
+SELinux is in "enforcing/targeted" mode.
+
+[root@revserver ~]# sestatus
+SELinux status:                 enabled
+SELinuxfs mount:                /selinux
+Current mode:                   enforcing
+Mode from config file:          enforcing
+Policy version:                 24
+Policy from config file:        targeted
+[root@revserver ~]# 
+
+:::::::::::::::
+
+[root@revserver ~]# ls -ldZ /var/www/html
+drwxr-xr-x. root root system_u:object_r:httpd_sys_content_t:s0 /var/www/html
+
+[root@revserver ~]# touch /var/www/html/testfile
+[root@revserver ~]# ls -lZ /var/www/html/testfile 
+-rw-r--r--. root root unconfined_u:object_r:httpd_sys_content_t:s0 /var/www/html/testfile
+
+[root@revserver ~]# service httpd restart
+
+[jdoe@revserver MyTemp]$ wget https://revserver.homeoffice.wal-mart.com:443/testfile
+--2012-11-01 16:43:20--  http://revserver.homeoffice.wal-mart.com:443/testfile
+Resolving revserver.homeoffice.wal-mart.com... 172.29.22.149
+Connecting to revserver.homeoffice.wal-mart.com|172.29.22.149|:443... connected.
+HTTP request sent, awaiting response... 200 No headers, assuming HTTP/0.9
+Length: unspecified
+Saving to: “testfile”
+
+    [ <=>                                                                                ] 598         --.-K/s   in 0s      
+
+2012-11-01 16:43:20 (109 MB/s) - “testfile” saved [598]
+
+[jdoe@revserver MyTemp]$ ls -lZ testfile 
+-rw-rw-r--. jdoe jdoe unconfined_u:object_r:user_home_t:s0 testfile
+
+Change the file to samba share type.
+
+[root@revserver ~]# chcon -t samba_share_t /var/www/html/testfile 
+[root@revserver ~]# ls -lZ /var/www/html/testfile
+-rw-r--r--. root root unconfined_u:object_r:samba_share_t:s0 /var/www/html/testfile
+
+The user attemps to use wget again, but this time it failes because the file not labeled
+with the HTTP domain.
+
+The user removes the file.
+
+[jdoe@revserver MyTemp]$ rm -rf testfile 
+
+The user attempts to get the file once again.
+
+[jdoe@revserver MyTemp]$ wget https://revserver.homeoffice.wal-mart.com:443/testfile --no-check-certificate
+--2012-11-01 17:06:11--  https://revserver.homeoffice.wal-mart.com/testfile
+Resolving revserver.homeoffice.wal-mart.com... 172.29.22.149
+Connecting to revserver.homeoffice.wal-mart.com|172.29.22.149|:443... connected.
+WARNING: cannot verify revserver.homeoffice.wal-mart.com’s certificate, issued by “/C=US/ST=CA/L=San Bruno/O=WM/OU=SysEng/CN=revserver.homeoffice.wal-mart.com/emailAddress=jdoe@revserver.homeoffice.wal-mart.com”:
+  Self-signed certificate encountered.
+HTTP request sent, awaiting response... 403 Forbidden
+2012-11-01 17:06:12 ERROR 403: Forbidden.
+
+The Apache error log also registers the failed attempt with a "Permission Denied" message.
+
+[root@revserver ~]# tail /var/log/httpd/tail error_log
+Thu Nov 01 17:06:11 2012] [info] [client 172.29.22.149] Connection to child 6 established (server svnserver.homeoffice.wal-mart.com:443)
+[Thu Nov 01 17:06:11 2012] [info] Seeding PRNG with 136 bytes of entropy
+[Thu Nov 01 17:06:12 2012] [info] Initial (No.1) HTTPS request received for child 6 (server svnserver.homeoffice.wal-mart.com:443)
+[Thu Nov 01 17:06:12 2012] [error] [client 172.29.22.149] (13)Permission denied: access to /testfile denied
+[Thu Nov 01 17:06:12 2012] [info] [client 172.29.22.149] Connection closed to child 6 with standard shutdown (server svnserver.homeoffice.wal-mart.com:443)
+
+
+
+<!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
+----

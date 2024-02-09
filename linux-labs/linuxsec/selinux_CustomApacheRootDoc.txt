@@ -1,0 +1,327 @@
+<!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
+----
+
+==Setup Custom DocumentRoot
+
+CREATED: Fri Nov  2 12:55:37 PDT 2012
+
+[root@revserver ~]# httpd -version
+Server version: Apache/2.2.15 (Unix)
+Server built:   Feb 13 2012 22:25:23
+
+:::::::::::::::
+
+Create two dirs in the /home filesystem.
+
+[root@revserver home]# mkdir /home/web1 /home/web2
+
+[root@revserver home]# ls -lZd /home/web1 /home/web2
+drwxr-xr-x. root root unconfined_u:object_r:home_root_t:s0 /home/web1
+drwxr-xr-x. root root unconfined_u:object_r:home_root_t:s0 /home/web2
+
+[root@revserver home]# echo "WEB1 Main Page" >> /home/web1/index.html
+[root@revserver home]# echo "WEB2 Main Page" >> /home/web2/index.html
+
+:::::::::::::::
+
+Create two Virtual Hosts definitions in apache.
+
+https://httpd.apache.org/docs/2.2/mod/core.html#namevirtualhost
+
+The key to this setup is the directive "NameVirtualHost *:80".
+You can then use "*:80" to setup as many virtual hosts as needed.
+
+[root@revserver ]# cat /etc/httpd/conf.d/dirTest.conf
+# My Virtual Hosts Config File for Two Domains
+NameVirtualHost *:80
+Listen 80
+
+<VirtualHost *:80>
+        ServerAdmin jdoe@web1.homeoffice.wal-mart.com
+        ServerName web1.homeoffice.wal-mart.com
+        ServerAlias web1
+        DocumentRoot /home/web1
+        ErrorLog "/var/log/web1-error_log"
+        CustomLog "/var/log/web1-access_log" common
+</VirtualHost>
+
+<VirtualHost *:80>
+        ServerAdmin jdoe@web2.homeoffice.wal-mart.com
+        ServerName web2.homeoffice.wal-mart.com
+        ServerAlias web2
+        DocumentRoot /home/web2
+        ErrorLog "/var/log/web1-error_log"
+        CustomLog "/var/log/web1-access_log" common
+</VirtualHost>
+[root@revserver ]#
+
+Create the log files to go with the two servers.
+
+[root@revserver ~]# touch /var/log/web1-error_log
+[root@revserver ~]# touch /var/log/web2-error_log
+[root@revserver ~]# touch /var/log/web1-access_log
+[root@revserver ~]# touch /var/log/web2-access_log
+
+:::::::::::::::
+
+Add host aliases in the /etc/hosts
+
+[root@revserver home]# cat /etc/hosts
+127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
+#
+172.29.22.149 revserver.homeoffice.wal-mart.com revserver loghost svnserver web1 web2
+
+
+:::::::::::::::
+
+[root@revserver ~]# service httpd restart
+Stopping httpd:                                            [  OK  ]
+Starting httpd:                                            [  OK  ]
+[root@revserver ~]# 
+
+:::::::::::::::
+
+Test access to the servers.
+
+[root@revserver ]# telnet web1 80
+Trying 172.29.22.149...
+Connected to web1.
+Escape character is '^]'.
+^C
+Connection closed by foreign host.
+
+[root@revserver ]# telnet web2 80
+Trying 172.29.22.149...
+Connected to web2.
+Escape character is '^]'.
+^C
+Connection closed by foreign host.
+[root@revserver ]# 
+
+:::::::::::::::
+
+Using wget failes even though the VHs are correctly configured, can be ping and
+telnet to.
+
+[jdoe@revserver MyTemp]$ wget http://web1/index.html
+--2012-11-02 12:25:09--  http://web1/index.html
+Resolving web1... 172.29.22.149
+Connecting to web1|172.29.22.149|:80... connected.
+HTTP request sent, awaiting response... 403 Forbidden
+2012-11-02 12:25:09 ERROR 403: Forbidden.
+
+[jdoe@revserver MyTemp]$ wget http://web2/index.html
+--2012-11-02 12:25:14--  http://web2/index.html
+Resolving web2... 172.29.22.149
+Connecting to web2|172.29.22.149|:80... connected.
+HTTP request sent, awaiting response... 403 Forbidden
+2012-11-02 12:25:14 ERROR 403: Forbidden.
+
+Entering the URL http://web1/index.html in a browser, gives the familiar Forbiden error.
+"Forbidden
+You don't have permission to access /index.html on this server.
+Apache/2.2.15 (CentOS) Server at web1 Port 80"
+
+The reason for the failure is that the DocumentRoot locations do not have the correct
+HTTP SELinux context. At this moment both dirs are of type "home_root_t" which is not
+the correct HTTP SELinux domain.
+
+[root@revserver ~]# ls -lZd /home/web1 /home/web2
+drwxr-xr-x. root root unconfined_u:object_r:home_root_t:s0 /home/web1
+drwxr-xr-x. root root unconfined_u:object_r:home_root_t:s0 /home/web2
+
+:::::::::::::::
+
+==Relabel the custom DocumentRoot
+
+[root@revserver ~]# chcon -R -t httpd_sys_content_t /home/web1/
+[root@revserver ~]# touch /home/web1/data.html
+[root@revserver ~]# ls -lZ /home/web1
+-rw-r--r--. root root unconfined_u:object_r:httpd_sys_content_t:s0 data.html
+-rw-r--r--. root root unconfined_u:object_r:httpd_sys_content_t:s0 index.html
+
+[root@revserver ~]# chcon -R -t httpd_sys_content_t /home/web2
+[root@revserver ~]# ls -lZ /home/web2
+-rw-r--r--. root root unconfined_u:object_r:httpd_sys_content_t:s0 index.html
+[root@revserver ~]#
+
+Use the sem anage fcontext command (sem anage is provided by the policycoreutils-python
+package) to make label changes that survive a relabel and the restorecon command. 
+
+Run the following command as the root user to add the label change to file-context 
+configuration:
+
+[root@revserver ~]# semanage fcontext -a -t httpd_sys_content_t "/home/web1(/.*)?"
+[root@revserver ~]# semanage fcontext -a -t httpd_sys_content_t "/home/web2(/.*)?"
+
+This command adds changes to file-context configuration. 
+
+[root@revserver contexts]# grep web1 /etc/selinux/targeted/contexts/files/file_contexts.local
+/home/web1(/.*)?    system_u:object_r:httpd_sys_content_t:s0
+
+[root@revserver contexts]# grep web2 /etc/selinux/targeted/contexts/files/file_contexts.local
+/home/web2(/.*)?    system_u:object_r:httpd_sys_content_t:s0
+
+Then, run the restorecon command, which reads filecontext configuration, to apply 
+the label change.
+
+[root@revserver ~]# restorecon -R -v /home/web1/
+[root@revserver ~]# restorecon -R -v /home/web2/
+
+:::::::::::::::
+
+Now, we can access the web sites with custom DocumentRoots.
+
+[jdoe@revserver MyTemp]$ wget http://web1/index.html
+--2012-11-02 14:15:14--  http://web1/index.html
+Resolving web1... 172.29.22.149
+Connecting to web1|172.29.22.149|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 15 [text/html]
+Saving to: “index.html”
+100%[==================================================================>] 15          --.-K/s   in 0s      
+2012-11-02 14:15:14 (3.06 MB/s) - “index.html” saved [15/15]
+[jdoe@revserver MyTemp]$ 
+
+[jdoe@revserver MyTemp]$ wget http://web2/index.html
+--2012-11-02 14:15:16--  http://web2/index.html
+Resolving web2... 172.29.22.149
+Connecting to web2|172.29.22.149|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 15 [text/html]
+Saving to: “index.html.1”
+100%[==================================================================>] 15          --.-K/s   in 0s      
+2012-11-02 14:15:16 (3.37 MB/s) - “index.html.1” saved [15/15]
+[jdoe@revserver MyTemp]$ 
+
+<!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
+----
+
+[root@revserver ~]# mkdir /home/web1/cgi-bin
+[root@revserver ~]# cd /home/web1/cgi-bin
+[root@revserver cgi-bin]# vi first.pl
+[root@revserver cgi-bin]# chmod +x first.pl 
+[root@revserver cgi-bin]# ls -lZ
+-rwxr-xr-x. root root unconfined_u:object_r:httpd_sys_content_t:s0 first.pl
+
+Go to a browser and enter http://web1/cgi-bin/first.pl, which returns an error.
+	"Not Found
+	The requested URL /cgi-bin/first.pl was not found on this server.
+	Apache/2.2.15 (CentOS) Server at web1 Port 80"
+The error log registers an error.
+	"[Fri Nov 02 14:37:13 2012] [error] [client 172.29.22.149] script not found or 
+	unable to stat: /var/www/cgi-bin/first.pl"
+
+::::::::::::::
+
+Modify the Virtual Host stanza for the server web1. Add the ScriptAlias directive 
+to the VH so it accepts a new CGI bin dir and restart apache. Also add a Directory 
+block to instruct apache to accept the execution of cgi scripts.
+
+Reference: 
+http://httpd.apache.org/docs/2.2/howto/cgi.html
+http://wiki.gentoo.org/wiki/SELinux/apache
+
+[root@revserver conf.d]# cat /etc/httpd/conf.d/dirTest.conf 
+# My Virtual Hosts Config File for Two Domains
+NameVirtualHost *:80
+Listen 80
+
+<VirtualHost *:80>
+        ServerAdmin jdoe@web1.homeoffice.wal-mart.com
+        ServerName revserver.homeoffice.wal-mart.com
+        ServerAlias web1
+        DocumentRoot /home/web1
+        ErrorLog "/var/log/httpd/web1-error_log"
+        CustomLog "/var/log/httpd/web1-access_log" common
+
+        ScriptAlias /cgi-bin/  /home/web1/cgi-bin/		
+        <Directory /home/web1/cgi-bin>					
+                Options +ExecCGI						
+                AddHandler cgi-script .cgi .pl			
+        </Directory>
+</VirtualHost>
+
+<VirtualHost *:80>
+        ServerAdmin jdoe@web2.homeoffice.wal-mart.com
+        ServerName revserver.homeoffice.wal-mart.com
+        ServerAlias web2
+        DocumentRoot /home/web2
+        ErrorLog "/var/log/httpd/web1-error_log"
+        CustomLog "/var/log/httpd/web1-access_log" common
+</VirtualHost>
+
+Restart apache so it re-reads its configuration.
+
+[root@revserver ~]# service httpd restart
+
+Label the cgi script with the label "httpd_sys_script_exec_t".
+
+[root@revserver cgi-bin]# chcon -t httpd_sys_script_exec_t first.pl 
+[root@revserver cgi-bin]# ls -lZ
+-rwxr-xr-x. root root unconfined_u:object_r:httpd_sys_script_exec_t:s0 first.pl
+
+Test in a browser with the URL  http://localhost/cgi-bin/first.pl
+
+A user should also be able to wget the file.
+
+[jdoe@revserver MyTemp]$ wget http://web1/cgi-bin/first.pl
+--2012-11-02 15:26:20--  http://web1/cgi-bin/first.pl
+Resolving web1... 172.29.22.149
+Connecting to web1|172.29.22.149|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: “first.pl”
+    [ <=>                                          ] 13          --.-K/s   in 0s      
+2012-11-02 15:26:20 (2.62 MB/s) - “first.pl” saved [13]
+[jdoe@revserver MyTemp]$ 
+
+<!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
+----
+
+==Reference
+
+::::::::::::::::
+
+The SELinux records the default context for /var/www in the config file found
+at /etc/selinux/targeted/contexts/files/file_contexts.
+
+/var/www(/.*)?  system_u:object_r:httpd_sys_content_t:s0
+
+::::::::::::::::
+
+<!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
+----
+
+==Troubleshooting
+
+[root@revserver ~]# apachectl configtest
+Warning: DocumentRoot [/home/website2] does not exist
+[Fri Nov 02 12:02:07 2012] [warn] _default_ VirtualHost overlap on port 80, the first has precedence
+Syntax OK
+
+::::::::::::::::
+
+<VirtualHost *:80>
+        ScriptAlias  /home/web1/cbi-bin/
+</VirtualHost>
+
+[root@revserver ~]# service httpd restart
+Stopping httpd:                                            [  OK  ]
+Starting httpd: Syntax error on line 14 of /etc/httpd/conf.d/dirTest.conf:
+ScriptAlias takes two arguments, a fakename and a realname
+                                                           [FAILED]
+[root@revserver ~]# 
+
+<VirtualHost *:80>
+        ScriptAlias /cgi-bin/  /home/web1/cbi-bin/
+</VirtualHost>
+
+[root@revserver ~]# service httpd restart
+Stopping httpd:                                            [FAILED]
+Starting httpd:                                            [  OK  ]
+
+
+<!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
+----

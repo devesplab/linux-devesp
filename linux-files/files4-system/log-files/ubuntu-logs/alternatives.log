@@ -1,0 +1,272 @@
+update-alternatives 2022-11-30 02:04:07: run with --install /usr/bin/awk awk /usr/bin/mawk 5 --slave /usr/share/man/man1/awk.1.gz awk.1.gz /usr/share/man/man1/mawk.1.gz --slave /usr/bin/nawk nawk /usr/bin/mawk --slave /usr/share/man/man1/nawk.1.gz nawk.1.gz /usr/share/man/man1/mawk.1.gz
+update-alternatives 2022-11-30 02:04:07: link group awk updated to point to /usr/bin/mawk
+update-alternatives 2022-11-30 02:04:10: run with --install /usr/bin/which which /usr/bin/which.debianutils 0 --slave /usr/share/man/man1/which.1.gz which.1.gz /usr/share/man/man1/which.debianutils.1.gz --slave /usr/share/man/de/man1/which.1.gz which.de1.gz /usr/share/man/de/man1/which.debianutils.1.gz --slave /usr/share/man/es/man1/which.1.gz which.es1.gz /usr/share/man/es/man1/which.debianutils.1.gz --slave /usr/share/man/fr/man1/which.1.gz which.fr1.gz /usr/share/man/fr/man1/which.debianutils.1.gz --slave /usr/share/man/it/man1/which.1.gz which.it1.gz /usr/share/man/it/man1/which.debianutils.1.gz --slave /usr/share/man/ja/man1/which.1.gz which.ja1.gz /usr/share/man/ja/man1/which.debianutils.1.gz --slave /usr/share/man/pl/man1/which.1.gz which.pl1.gz /usr/share/man/pl/man1/which.debianutils.1.gz --slave /usr/share/man/sl/man1/which.1.gz which.sl1.gz /usr/share/man/sl/man1/which.debianutils.1.gz
+update-alternatives 2022-11-30 02:04:10: link group which updated to point to /usr/bin/which.debianutils
+update-alternatives 2022-11-30 02:04:10: run with --install /usr/bin/awk awk /usr/bin/mawk 5 --slave /usr/share/man/man1/awk.1.gz awk.1.gz /usr/share/man/man1/mawk.1.gz --slave /usr/bin/nawk nawk /usr/bin/mawk --slave /usr/share/man/man1/nawk.1.gz nawk.1.gz /usr/share/man/man1/mawk.1.gz
+update-alternatives 2022-11-30 02:04:11: run with --install /usr/share/man/man7/builtins.7.gz builtins.7.gz /usr/share/man/man7/bash-builtins.7.gz 10
+update-alternatives 2022-11-30 02:04:11: link group builtins.7.gz updated to point to /usr/share/man/man7/bash-builtins.7.gz
+update-alternatives 2022-11-30 02:04:11: run with --install /usr/sbin/rmt rmt /usr/sbin/rmt-tar 50 --slave /usr/share/man/man8/rmt.8.gz rmt.8.gz /usr/share/man/man8/rmt-tar.8.gz
+update-alternatives 2022-11-30 02:04:11: link group rmt updated to point to /usr/sbin/rmt-tar
+update-alternatives 2022-11-30 02:04:11: run with --install /usr/bin/pager pager /bin/more 50 --slave /usr/share/man/man1/pager.1.gz pager.1.gz /usr/share/man/man1/more.1.gz
+update-alternatives 2022-11-30 02:04:11: link group pager updated to point to /bin/more
+update-alternatives 2022-11-30 02:04:22: run with --remove builtins.7.gz /usr/share/man/man7/bash-builtins.7.gz
+update-alternatives 2022-11-30 02:04:22: link group builtins.7.gz fully removed
+update-alternatives 2022-11-30 02:04:32: run with --install /usr/bin/which which /usr/bin/which.debianutils 0 --slave /usr/share/man/man1/which.1.gz which.1.gz /usr/share/man/man1/which.debianutils.1.gz --slave /usr/share/man/de/man1/which.1.gz which.de1.gz /usr/share/man/de/man1/which.debianutils.1.gz --slave /usr/share/man/es/man1/which.1.gz which.es1.gz /usr/share/man/es/man1/which.debianutils.1.gz --slave /usr/share/man/fr/man1/which.1.gz which.fr1.gz /usr/share/man/fr/man1/which.debianutils.1.gz --slave /usr/share/man/it/man1/which.1.gz which.it1.gz /usr/share/man/it/man1/which.debianutils.1.gz --slave /usr/share/man/ja/man1/which.1.gz which.ja1.gz /usr/share/man/ja/man1/which.debianutils.1.gz --slave /usr/share/man/pl/man1/which.1.gz which.pl1.gz /usr/share/man/pl/man1/which.debianutils.1.gz --slave /usr/share/man/sl/man1/which.1.gz which.sl1.gz /usr/share/man/sl/man1/which.debianutils.1.gz
+update-alternatives 2022-11-30 02:04:32: auto-repair link group which
+update-alternatives 2022-11-30 02:06:45: run with --install /usr/bin/awk awk /usr/bin/mawk 5 --slave /usr/share/man/man1/awk.1.gz awk.1.gz /usr/share/man/man1/mawk.1.gz --slave /usr/bin/nawk nawk /usr/bin/mawk --slave /usr/share/man/man1/nawk.1.gz nawk.1.gz /usr/share/man/man1/mawk.1.gz
+update-alternatives 2022-11-30 02:06:45: auto-repair link group awk
+update-alternatives 2022-11-30 02:07:01: run with --install /usr/sbin/rmt rmt /usr/sbin/rmt-tar 50 --slave /usr/share/man/man8/rmt.8.gz rmt.8.gz /usr/share/man/man8/rmt-tar.8.gz
+update-alternatives 2022-11-30 02:07:01: auto-repair link group rmt
+update-alternatives 2022-11-30 02:07:06: run with --install /usr/bin/pager pager /bin/more 50 --slave /usr/share/man/man1/pager.1.gz pager.1.gz /usr/share/man/man1/more.1.gz
+update-alternatives 2022-11-30 02:07:06: auto-repair link group pager
+update-alternatives 2023-07-15 19:37:18: run with --install /usr/bin/lzma lzma /usr/bin/xz 20 --slave /usr/share/man/man1/lzma.1.gz lzma.1.gz /usr/share/man/man1/xz.1.gz --slave /usr/bin/unlzma unlzma /usr/bin/unxz --slave /usr/share/man/man1/unlzma.1.gz unlzma.1.gz /usr/share/man/man1/unxz.1.gz --slave /usr/bin/lzcat lzcat /usr/bin/xzcat --slave /usr/share/man/man1/lzcat.1.gz lzcat.1.gz /usr/share/man/man1/xzcat.1.gz --slave /usr/bin/lzmore lzmore /usr/bin/xzmore --slave /usr/share/man/man1/lzmore.1.gz lzmore.1.gz /usr/share/man/man1/xzmore.1.gz --slave /usr/bin/lzless lzless /usr/bin/xzless --slave /usr/share/man/man1/lzless.1.gz lzless.1.gz /usr/share/man/man1/xzless.1.gz --slave /usr/bin/lzdiff lzdiff /usr/bin/xzdiff --slave /usr/share/man/man1/lzdiff.1.gz lzdiff.1.gz /usr/share/man/man1/xzdiff.1.gz --slave /usr/bin/lzcmp lzcmp /usr/bin/xzcmp --slave /usr/share/man/man1/lzcmp.1.gz lzcmp.1.gz /usr/share/man/man1/xzcmp.1.gz --slave /usr/bin/lzgrep lzgrep /usr/bin/xzgrep --slave /usr/share/man/man1/lzgrep.1.gz lzgrep.1.gz /usr/share/man/man1/xzgrep.1.gz --slave /usr/bin/lzegrep lzegrep /usr/bin/xzegrep --slave /usr/share/man/man1/lzegrep.1.gz lzegrep.1.gz /usr/share/man/man1/xzegrep.1.gz --slave /usr/bin/lzfgrep lzfgrep /usr/bin/xzfgrep --slave /usr/share/man/man1/lzfgrep.1.gz lzfgrep.1.gz /usr/share/man/man1/xzfgrep.1.gz
+update-alternatives 2023-07-15 19:37:18: link group lzma updated to point to /usr/bin/xz
+update-alternatives 2023-07-15 19:37:18: run with --quiet --install /usr/bin/pinentry pinentry /usr/bin/pinentry-curses 50 --slave /usr/share/man/man1/pinentry.1.gz pinentry.1.gz /usr/share/man/man1/pinentry-curses.1.gz
+update-alternatives 2023-07-15 19:37:18: link group pinentry updated to point to /usr/bin/pinentry-curses
+update-alternatives 2023-07-15 19:37:34: run with --install /usr/bin/vim vim /usr/bin/vim.basic 30
+update-alternatives 2023-07-15 19:37:34: link group vim updated to point to /usr/bin/vim.basic
+update-alternatives 2023-07-15 19:37:34: run with --install /usr/bin/vimdiff vimdiff /usr/bin/vim.basic 30
+update-alternatives 2023-07-15 19:37:34: link group vimdiff updated to point to /usr/bin/vim.basic
+update-alternatives 2023-07-15 19:37:34: run with --install /usr/bin/rvim rvim /usr/bin/vim.basic 30
+update-alternatives 2023-07-15 19:37:34: link group rvim updated to point to /usr/bin/vim.basic
+update-alternatives 2023-07-15 19:37:34: run with --install /usr/bin/rview rview /usr/bin/vim.basic 30
+update-alternatives 2023-07-15 19:37:34: link group rview updated to point to /usr/bin/vim.basic
+update-alternatives 2023-07-15 19:37:34: run with --install /usr/bin/vi vi /usr/bin/vim.basic 30 --slave /usr/share/man/da/man1/vi.1.gz vi.da.1.gz /usr/share/man/da/man1/vim.1.gz --slave /usr/share/man/de/man1/vi.1.gz vi.de.1.gz /usr/share/man/de/man1/vim.1.gz --slave /usr/share/man/fr/man1/vi.1.gz vi.fr.1.gz /usr/share/man/fr/man1/vim.1.gz --slave /usr/share/man/it/man1/vi.1.gz vi.it.1.gz /usr/share/man/it/man1/vim.1.gz --slave /usr/share/man/ja/man1/vi.1.gz vi.ja.1.gz /usr/share/man/ja/man1/vim.1.gz --slave /usr/share/man/pl/man1/vi.1.gz vi.pl.1.gz /usr/share/man/pl/man1/vim.1.gz --slave /usr/share/man/ru/man1/vi.1.gz vi.ru.1.gz /usr/share/man/ru/man1/vim.1.gz --slave /usr/share/man/man1/vi.1.gz vi.1.gz /usr/share/man/man1/vim.1.gz
+update-alternatives 2023-07-15 19:37:34: link group vi updated to point to /usr/bin/vim.basic
+update-alternatives 2023-07-15 19:37:34: run with --install /usr/bin/view view /usr/bin/vim.basic 30 --slave /usr/share/man/da/man1/view.1.gz view.da.1.gz /usr/share/man/da/man1/vim.1.gz --slave /usr/share/man/de/man1/view.1.gz view.de.1.gz /usr/share/man/de/man1/vim.1.gz --slave /usr/share/man/fr/man1/view.1.gz view.fr.1.gz /usr/share/man/fr/man1/vim.1.gz --slave /usr/share/man/it/man1/view.1.gz view.it.1.gz /usr/share/man/it/man1/vim.1.gz --slave /usr/share/man/ja/man1/view.1.gz view.ja.1.gz /usr/share/man/ja/man1/vim.1.gz --slave /usr/share/man/pl/man1/view.1.gz view.pl.1.gz /usr/share/man/pl/man1/vim.1.gz --slave /usr/share/man/ru/man1/view.1.gz view.ru.1.gz /usr/share/man/ru/man1/vim.1.gz --slave /usr/share/man/man1/view.1.gz view.1.gz /usr/share/man/man1/vim.1.gz
+update-alternatives 2023-07-15 19:37:34: link group view updated to point to /usr/bin/vim.basic
+update-alternatives 2023-07-15 19:37:34: run with --install /usr/bin/ex ex /usr/bin/vim.basic 30 --slave /usr/share/man/da/man1/ex.1.gz ex.da.1.gz /usr/share/man/da/man1/vim.1.gz --slave /usr/share/man/de/man1/ex.1.gz ex.de.1.gz /usr/share/man/de/man1/vim.1.gz --slave /usr/share/man/fr/man1/ex.1.gz ex.fr.1.gz /usr/share/man/fr/man1/vim.1.gz --slave /usr/share/man/it/man1/ex.1.gz ex.it.1.gz /usr/share/man/it/man1/vim.1.gz --slave /usr/share/man/ja/man1/ex.1.gz ex.ja.1.gz /usr/share/man/ja/man1/vim.1.gz --slave /usr/share/man/pl/man1/ex.1.gz ex.pl.1.gz /usr/share/man/pl/man1/vim.1.gz --slave /usr/share/man/ru/man1/ex.1.gz ex.ru.1.gz /usr/share/man/ru/man1/vim.1.gz --slave /usr/share/man/man1/ex.1.gz ex.1.gz /usr/share/man/man1/vim.1.gz
+update-alternatives 2023-07-15 19:37:34: link group ex updated to point to /usr/bin/vim.basic
+update-alternatives 2023-07-15 19:37:34: run with --install /usr/bin/editor editor /usr/bin/vim.basic 30 --slave /usr/share/man/da/man1/editor.1.gz editor.da.1.gz /usr/share/man/da/man1/vim.1.gz --slave /usr/share/man/de/man1/editor.1.gz editor.de.1.gz /usr/share/man/de/man1/vim.1.gz --slave /usr/share/man/fr/man1/editor.1.gz editor.fr.1.gz /usr/share/man/fr/man1/vim.1.gz --slave /usr/share/man/it/man1/editor.1.gz editor.it.1.gz /usr/share/man/it/man1/vim.1.gz --slave /usr/share/man/ja/man1/editor.1.gz editor.ja.1.gz /usr/share/man/ja/man1/vim.1.gz --slave /usr/share/man/pl/man1/editor.1.gz editor.pl.1.gz /usr/share/man/pl/man1/vim.1.gz --slave /usr/share/man/ru/man1/editor.1.gz editor.ru.1.gz /usr/share/man/ru/man1/vim.1.gz --slave /usr/share/man/man1/editor.1.gz editor.1.gz /usr/share/man/man1/vim.1.gz
+update-alternatives 2023-07-15 19:37:34: link group editor updated to point to /usr/bin/vim.basic
+update-alternatives 2023-07-15 19:37:34: run with --install /usr/bin/telnet telnet /usr/bin/telnet.netkit 100 --slave /usr/share/man/man1/telnet.1.gz telnet.1.gz /usr/share/man/man1/telnet.netkit.1.gz
+update-alternatives 2023-07-15 19:37:34: link group telnet updated to point to /usr/bin/telnet.netkit
+update-alternatives 2023-07-15 19:37:34: run with --install /usr/bin/locate locate /usr/bin/plocate 90 --slave /usr/share/man/man1/locate.1.gz locate.1.gz /usr/share/man/man1/plocate.1.gz --slave /usr/bin/updatedb updatedb /usr/sbin/updatedb.plocate --slave /usr/share/man/man8/updatedb.8.gz updatedb.8.gz /usr/share/man/man8/updatedb.plocate.8.gz
+update-alternatives 2023-07-15 19:37:34: link group locate updated to point to /usr/bin/plocate
+update-alternatives 2023-07-15 19:37:56: run with --install /usr/bin/pybabel pybabel /usr/bin/pybabel-python3 200
+update-alternatives 2023-07-15 19:37:56: link group pybabel updated to point to /usr/bin/pybabel-python3
+update-alternatives 2023-07-15 19:37:57: run with --install /usr/bin/rsh rsh /usr/bin/ssh 20 --slave /usr/share/man/man1/rsh.1.gz rsh.1.gz /usr/share/man/man1/ssh.1.gz
+update-alternatives 2023-07-15 19:37:57: link group rsh updated to point to /usr/bin/ssh
+update-alternatives 2023-07-15 19:37:57: run with --install /usr/bin/rlogin rlogin /usr/bin/slogin 20 --slave /usr/share/man/man1/rlogin.1.gz rlogin.1.gz /usr/share/man/man1/slogin.1.gz
+update-alternatives 2023-07-15 19:37:57: link group rlogin updated to point to /usr/bin/slogin
+update-alternatives 2023-07-15 19:37:57: run with --install /usr/bin/rcp rcp /usr/bin/scp 20 --slave /usr/share/man/man1/rcp.1.gz rcp.1.gz /usr/share/man/man1/scp.1.gz
+update-alternatives 2023-07-15 19:37:57: link group rcp updated to point to /usr/bin/scp
+update-alternatives 2023-07-15 19:38:19: run with --install /usr/bin/traceroute traceroute /usr/bin/traceroute.db 100 --slave /usr/sbin/traceroute traceroute.sbin /usr/bin/traceroute.db --slave /usr/share/man/man1/traceroute.1.gz traceroute.1.gz /usr/share/man/man1/traceroute.db.1.gz
+update-alternatives 2023-07-15 19:38:19: link group traceroute updated to point to /usr/bin/traceroute.db
+update-alternatives 2023-07-15 19:38:19: run with --install /usr/bin/traceroute6 traceroute6 /usr/bin/traceroute6.db 100 --slave /usr/share/man/man1/traceroute6.1.gz traceroute6.1.gz /usr/share/man/man1/traceroute6.db.1.gz
+update-alternatives 2023-07-15 19:38:19: link group traceroute6 updated to point to /usr/bin/traceroute6.db
+update-alternatives 2023-07-15 19:38:19: run with --install /usr/bin/lft lft /usr/bin/lft.db 100 --slave /usr/share/man/man1/lft.1.gz lft.1.gz /usr/share/man/man1/lft.db.1.gz
+update-alternatives 2023-07-15 19:38:19: link group lft updated to point to /usr/bin/lft.db
+update-alternatives 2023-07-15 19:38:19: run with --install /usr/bin/traceproto traceproto /usr/bin/traceproto.db 100 --slave /usr/share/man/man1/traceproto.1.gz traceproto.1.gz /usr/share/man/man1/traceproto.db.1.gz
+update-alternatives 2023-07-15 19:38:19: link group traceproto updated to point to /usr/bin/traceproto.db
+update-alternatives 2023-07-15 19:38:19: run with --install /usr/sbin/tcptraceroute tcptraceroute /usr/sbin/tcptraceroute.db 100 --slave /usr/share/man/man8/tcptraceroute.8.gz tcptraceroute.8.gz /usr/share/man/man8/tcptraceroute.db.8.gz
+update-alternatives 2023-07-15 19:38:19: link group tcptraceroute updated to point to /usr/sbin/tcptraceroute.db
+update-alternatives 2023-07-15 19:38:19: run with --quiet --install /usr/bin/pager pager /usr/bin/less 77 --slave /usr/share/man/man1/pager.1.gz pager.1.gz /usr/share/man/man1/less.1.gz
+update-alternatives 2023-07-15 19:38:19: link group pager updated to point to /usr/bin/less
+update-alternatives 2023-07-15 19:38:19: run with --install /usr/lib/x86_64-linux-gnu/libblas.so.3 libblas.so.3-x86_64-linux-gnu /usr/lib/x86_64-linux-gnu/blas/libblas.so.3 10
+update-alternatives 2023-07-15 19:38:19: link group libblas.so.3-x86_64-linux-gnu updated to point to /usr/lib/x86_64-linux-gnu/blas/libblas.so.3
+update-alternatives 2023-07-15 19:38:20: run with --quiet --install /usr/bin/www-browser www-browser /usr/bin/elinks 35 --slave /usr/share/man/man1/www-browser.1.gz www-browser.1.gz /usr/share/man/man1/elinks.1.gz
+update-alternatives 2023-07-15 19:38:20: link group www-browser updated to point to /usr/bin/elinks
+update-alternatives 2023-07-15 19:38:30: run with --install /bin/mt mt /bin/mt-gnu 10 --slave /usr/share/man/man1/mt.1.gz mt.1.gz /usr/share/man/man1/mt-gnu.1.gz
+update-alternatives 2023-07-15 19:38:30: link group mt updated to point to /bin/mt-gnu
+update-alternatives 2023-07-15 19:38:30: run with --install /etc/mysql/my.cnf my.cnf /etc/mysql/my.cnf.fallback 100
+update-alternatives 2023-07-15 19:38:30: link group my.cnf updated to point to /etc/mysql/my.cnf.fallback
+update-alternatives 2023-07-15 19:38:38: run with --install /usr/bin/frm frm /usr/bin/frm.mailutils 20 --slave /usr/share/man/man1/frm.1.gz frm.1.gz /usr/share/man/man1/frm.mailutils.1.gz
+update-alternatives 2023-07-15 19:38:38: link group frm updated to point to /usr/bin/frm.mailutils
+update-alternatives 2023-07-15 19:38:38: run with --install /usr/bin/from from /usr/bin/from.mailutils 20 --slave /usr/share/man/man1/from.1.gz from.1.gz /usr/share/man/man1/from.mailutils.1.gz
+update-alternatives 2023-07-15 19:38:38: link group from updated to point to /usr/bin/from.mailutils
+update-alternatives 2023-07-15 19:38:38: run with --install /usr/bin/messages messages /usr/bin/messages.mailutils 20 --slave /usr/share/man/man1/messages.1.gz messages.1.gz /usr/share/man/man1/messages.mailutils.1.gz
+update-alternatives 2023-07-15 19:38:38: link group messages updated to point to /usr/bin/messages.mailutils
+update-alternatives 2023-07-15 19:38:38: run with --install /usr/bin/movemail movemail /usr/bin/movemail.mailutils 20 --slave /usr/share/man/man1/movemail.1.gz movemail.1.gz /usr/share/man/man1/movemail.mailutils.1.gz
+update-alternatives 2023-07-15 19:38:38: link group movemail updated to point to /usr/bin/movemail.mailutils
+update-alternatives 2023-07-15 19:38:38: run with --install /usr/bin/readmsg readmsg /usr/bin/readmsg.mailutils 20 --slave /usr/share/man/man1/readmsg.1.gz readmsg.1.gz /usr/share/man/man1/readmsg.mailutils.1.gz
+update-alternatives 2023-07-15 19:38:38: link group readmsg updated to point to /usr/bin/readmsg.mailutils
+update-alternatives 2023-07-15 19:38:38: run with --install /usr/bin/dotlock dotlock /usr/bin/dotlock.mailutils 4 --slave /usr/share/man/man1/dotlock.1.gz dotlock.1.gz /usr/share/man/man1/dotlock.mailutils.1.gz
+update-alternatives 2023-07-15 19:38:38: link group dotlock updated to point to /usr/bin/dotlock.mailutils
+update-alternatives 2023-07-15 19:38:38: run with --install /usr/bin/mailx mailx /usr/bin/mail.mailutils 30 --slave /usr/share/man/man1/mailx.1.gz mailx.1.gz /usr/share/man/man1/mail.mailutils.1.gz --slave /usr/bin/mail mail /usr/bin/mail.mailutils --slave /usr/share/man/man1/mail.1.gz mail.1.gz /usr/share/man/man1/mail.mailutils.1.gz
+update-alternatives 2023-07-15 19:38:38: link group mailx updated to point to /usr/bin/mail.mailutils
+update-alternatives 2023-07-15 19:38:57: run with --quiet --install /lib/cpp cpp /usr/bin/cpp 10
+update-alternatives 2023-07-15 19:38:57: link group cpp updated to point to /usr/bin/cpp
+update-alternatives 2023-07-15 19:38:57: run with --quiet --install /usr/bin/cc cc /usr/bin/gcc 20 --slave /usr/share/man/man1/cc.1.gz cc.1.gz /usr/share/man/man1/gcc.1.gz
+update-alternatives 2023-07-15 19:38:57: link group cc updated to point to /usr/bin/gcc
+update-alternatives 2023-07-15 19:38:57: run with --quiet --install /usr/bin/c89 c89 /usr/bin/c89-gcc 20 --slave /usr/share/man/man1/c89.1.gz c89.1.gz /usr/share/man/man1/c89-gcc.1.gz
+update-alternatives 2023-07-15 19:38:57: link group c89 updated to point to /usr/bin/c89-gcc
+update-alternatives 2023-07-15 19:38:57: run with --quiet --install /usr/bin/c99 c99 /usr/bin/c99-gcc 20 --slave /usr/share/man/man1/c99.1.gz c99.1.gz /usr/share/man/man1/c99-gcc.1.gz
+update-alternatives 2023-07-15 19:38:57: link group c99 updated to point to /usr/bin/c99-gcc
+update-alternatives 2023-07-15 19:39:11: run with --install /usr/bin/c++ c++ /usr/bin/g++ 20 --slave /usr/share/man/man1/c++.1.gz c++.1.gz /usr/share/man/man1/g++.1.gz
+update-alternatives 2023-07-15 19:39:11: link group c++ updated to point to /usr/bin/g++
+update-alternatives 2023-07-15 19:39:45: run with --install /usr/sbin/rmt rmt /usr/sbin/rmt-tar 50 --slave /usr/share/man/man8/rmt.8.gz rmt.8.gz /usr/share/man/man8/rmt-tar.8.gz
+update-alternatives 2023-12-16 22:27:34: run with --install /usr/bin/jar jar /usr/lib/jvm/java-17-oracle/bin/jar 1091 --slave /usr/share/man/man1/jar.1.gz jar.1.gz /usr/lib/jvm/java-17-oracle/man/man1/jar.1.gz
+update-alternatives 2023-12-16 22:27:34: link group jar updated to point to /usr/lib/jvm/java-17-oracle/bin/jar
+update-alternatives 2023-12-16 22:27:34: run with --install /usr/bin/jarsigner jarsigner /usr/lib/jvm/java-17-oracle/bin/jarsigner 1091 --slave /usr/share/man/man1/jarsigner.1.gz jarsigner.1.gz /usr/lib/jvm/java-17-oracle/man/man1/jarsigner.1.gz
+update-alternatives 2023-12-16 22:27:34: link group jarsigner updated to point to /usr/lib/jvm/java-17-oracle/bin/jarsigner
+update-alternatives 2023-12-16 22:27:34: run with --install /usr/bin/java java /usr/lib/jvm/java-17-oracle/bin/java 1091 --slave /usr/share/man/man1/java.1.gz java.1.gz /usr/lib/jvm/java-17-oracle/man/man1/java.1.gz
+update-alternatives 2023-12-16 22:27:34: link group java updated to point to /usr/lib/jvm/java-17-oracle/bin/java
+update-alternatives 2023-12-16 22:27:34: run with --install /usr/bin/javac javac /usr/lib/jvm/java-17-oracle/bin/javac 1091 --slave /usr/share/man/man1/javac.1.gz javac.1.gz /usr/lib/jvm/java-17-oracle/man/man1/javac.1.gz
+update-alternatives 2023-12-16 22:27:34: link group javac updated to point to /usr/lib/jvm/java-17-oracle/bin/javac
+update-alternatives 2023-12-16 22:27:34: run with --install /usr/bin/javadoc javadoc /usr/lib/jvm/java-17-oracle/bin/javadoc 1091 --slave /usr/share/man/man1/javadoc.1.gz javadoc.1.gz /usr/lib/jvm/java-17-oracle/man/man1/javadoc.1.gz
+update-alternatives 2023-12-16 22:27:34: link group javadoc updated to point to /usr/lib/jvm/java-17-oracle/bin/javadoc
+update-alternatives 2023-12-16 22:27:34: run with --install /usr/bin/javap javap /usr/lib/jvm/java-17-oracle/bin/javap 1091 --slave /usr/share/man/man1/javap.1.gz javap.1.gz /usr/lib/jvm/java-17-oracle/man/man1/javap.1.gz
+update-alternatives 2023-12-16 22:27:34: link group javap updated to point to /usr/lib/jvm/java-17-oracle/bin/javap
+update-alternatives 2023-12-16 22:27:34: run with --install /usr/bin/jcmd jcmd /usr/lib/jvm/java-17-oracle/bin/jcmd 1091 --slave /usr/share/man/man1/jcmd.1.gz jcmd.1.gz /usr/lib/jvm/java-17-oracle/man/man1/jcmd.1.gz
+update-alternatives 2023-12-16 22:27:34: link group jcmd updated to point to /usr/lib/jvm/java-17-oracle/bin/jcmd
+update-alternatives 2023-12-16 22:27:34: run with --install /usr/bin/jconsole jconsole /usr/lib/jvm/java-17-oracle/bin/jconsole 1091 --slave /usr/share/man/man1/jconsole.1.gz jconsole.1.gz /usr/lib/jvm/java-17-oracle/man/man1/jconsole.1.gz
+update-alternatives 2023-12-16 22:27:34: link group jconsole updated to point to /usr/lib/jvm/java-17-oracle/bin/jconsole
+update-alternatives 2023-12-16 22:27:34: run with --install /usr/bin/jdb jdb /usr/lib/jvm/java-17-oracle/bin/jdb 1091 --slave /usr/share/man/man1/jdb.1.gz jdb.1.gz /usr/lib/jvm/java-17-oracle/man/man1/jdb.1.gz
+update-alternatives 2023-12-16 22:27:34: link group jdb updated to point to /usr/lib/jvm/java-17-oracle/bin/jdb
+update-alternatives 2023-12-16 22:27:34: run with --install /usr/bin/jdeprscan jdeprscan /usr/lib/jvm/java-17-oracle/bin/jdeprscan 1091 --slave /usr/share/man/man1/jdeprscan.1.gz jdeprscan.1.gz /usr/lib/jvm/java-17-oracle/man/man1/jdeprscan.1.gz
+update-alternatives 2023-12-16 22:27:34: link group jdeprscan updated to point to /usr/lib/jvm/java-17-oracle/bin/jdeprscan
+update-alternatives 2023-12-16 22:27:34: run with --install /usr/bin/jdeps jdeps /usr/lib/jvm/java-17-oracle/bin/jdeps 1091 --slave /usr/share/man/man1/jdeps.1.gz jdeps.1.gz /usr/lib/jvm/java-17-oracle/man/man1/jdeps.1.gz
+update-alternatives 2023-12-16 22:27:34: link group jdeps updated to point to /usr/lib/jvm/java-17-oracle/bin/jdeps
+update-alternatives 2023-12-16 22:27:34: run with --install /usr/bin/jfr jfr /usr/lib/jvm/java-17-oracle/bin/jfr 1091 --slave /usr/share/man/man1/jfr.1.gz jfr.1.gz /usr/lib/jvm/java-17-oracle/man/man1/jfr.1.gz
+update-alternatives 2023-12-16 22:27:34: link group jfr updated to point to /usr/lib/jvm/java-17-oracle/bin/jfr
+update-alternatives 2023-12-16 22:27:34: run with --install /usr/bin/jhsdb jhsdb /usr/lib/jvm/java-17-oracle/bin/jhsdb 1091 --slave /usr/share/man/man1/jhsdb.1.gz jhsdb.1.gz /usr/lib/jvm/java-17-oracle/man/man1/jhsdb.1.gz
+update-alternatives 2023-12-16 22:27:34: link group jhsdb updated to point to /usr/lib/jvm/java-17-oracle/bin/jhsdb
+update-alternatives 2023-12-16 22:27:34: run with --install /usr/bin/jimage jimage /usr/lib/jvm/java-17-oracle/bin/jimage 1091
+update-alternatives 2023-12-16 22:27:34: link group jimage updated to point to /usr/lib/jvm/java-17-oracle/bin/jimage
+update-alternatives 2023-12-16 22:27:34: run with --install /usr/bin/jinfo jinfo /usr/lib/jvm/java-17-oracle/bin/jinfo 1091 --slave /usr/share/man/man1/jinfo.1.gz jinfo.1.gz /usr/lib/jvm/java-17-oracle/man/man1/jinfo.1.gz
+update-alternatives 2023-12-16 22:27:34: link group jinfo updated to point to /usr/lib/jvm/java-17-oracle/bin/jinfo
+update-alternatives 2023-12-16 22:27:34: run with --install /usr/bin/jlink jlink /usr/lib/jvm/java-17-oracle/bin/jlink 1091 --slave /usr/share/man/man1/jlink.1.gz jlink.1.gz /usr/lib/jvm/java-17-oracle/man/man1/jlink.1.gz
+update-alternatives 2023-12-16 22:27:34: link group jlink updated to point to /usr/lib/jvm/java-17-oracle/bin/jlink
+update-alternatives 2023-12-16 22:27:34: run with --install /usr/bin/jmap jmap /usr/lib/jvm/java-17-oracle/bin/jmap 1091 --slave /usr/share/man/man1/jmap.1.gz jmap.1.gz /usr/lib/jvm/java-17-oracle/man/man1/jmap.1.gz
+update-alternatives 2023-12-16 22:27:34: link group jmap updated to point to /usr/lib/jvm/java-17-oracle/bin/jmap
+update-alternatives 2023-12-16 22:27:34: run with --install /usr/bin/jmod jmod /usr/lib/jvm/java-17-oracle/bin/jmod 1091 --slave /usr/share/man/man1/jmod.1.gz jmod.1.gz /usr/lib/jvm/java-17-oracle/man/man1/jmod.1.gz
+update-alternatives 2023-12-16 22:27:34: link group jmod updated to point to /usr/lib/jvm/java-17-oracle/bin/jmod
+update-alternatives 2023-12-16 22:27:34: run with --install /usr/bin/jpackage jpackage /usr/lib/jvm/java-17-oracle/bin/jpackage 1091 --slave /usr/share/man/man1/jpackage.1.gz jpackage.1.gz /usr/lib/jvm/java-17-oracle/man/man1/jpackage.1.gz
+update-alternatives 2023-12-16 22:27:34: link group jpackage updated to point to /usr/lib/jvm/java-17-oracle/bin/jpackage
+update-alternatives 2023-12-16 22:27:34: run with --install /usr/bin/jps jps /usr/lib/jvm/java-17-oracle/bin/jps 1091 --slave /usr/share/man/man1/jps.1.gz jps.1.gz /usr/lib/jvm/java-17-oracle/man/man1/jps.1.gz
+update-alternatives 2023-12-16 22:27:34: link group jps updated to point to /usr/lib/jvm/java-17-oracle/bin/jps
+update-alternatives 2023-12-16 22:27:34: run with --install /usr/bin/jrunscript jrunscript /usr/lib/jvm/java-17-oracle/bin/jrunscript 1091 --slave /usr/share/man/man1/jrunscript.1.gz jrunscript.1.gz /usr/lib/jvm/java-17-oracle/man/man1/jrunscript.1.gz
+update-alternatives 2023-12-16 22:27:34: link group jrunscript updated to point to /usr/lib/jvm/java-17-oracle/bin/jrunscript
+update-alternatives 2023-12-16 22:27:34: run with --install /usr/bin/jshell jshell /usr/lib/jvm/java-17-oracle/bin/jshell 1091 --slave /usr/share/man/man1/jshell.1.gz jshell.1.gz /usr/lib/jvm/java-17-oracle/man/man1/jshell.1.gz
+update-alternatives 2023-12-16 22:27:34: link group jshell updated to point to /usr/lib/jvm/java-17-oracle/bin/jshell
+update-alternatives 2023-12-16 22:27:34: run with --install /usr/bin/jstack jstack /usr/lib/jvm/java-17-oracle/bin/jstack 1091 --slave /usr/share/man/man1/jstack.1.gz jstack.1.gz /usr/lib/jvm/java-17-oracle/man/man1/jstack.1.gz
+update-alternatives 2023-12-16 22:27:34: link group jstack updated to point to /usr/lib/jvm/java-17-oracle/bin/jstack
+update-alternatives 2023-12-16 22:27:34: run with --install /usr/bin/jstat jstat /usr/lib/jvm/java-17-oracle/bin/jstat 1091 --slave /usr/share/man/man1/jstat.1.gz jstat.1.gz /usr/lib/jvm/java-17-oracle/man/man1/jstat.1.gz
+update-alternatives 2023-12-16 22:27:34: link group jstat updated to point to /usr/lib/jvm/java-17-oracle/bin/jstat
+update-alternatives 2023-12-16 22:27:34: run with --install /usr/bin/jstatd jstatd /usr/lib/jvm/java-17-oracle/bin/jstatd 1091 --slave /usr/share/man/man1/jstatd.1.gz jstatd.1.gz /usr/lib/jvm/java-17-oracle/man/man1/jstatd.1.gz
+update-alternatives 2023-12-16 22:27:34: link group jstatd updated to point to /usr/lib/jvm/java-17-oracle/bin/jstatd
+update-alternatives 2023-12-16 22:27:34: run with --install /usr/bin/keytool keytool /usr/lib/jvm/java-17-oracle/bin/keytool 1091 --slave /usr/share/man/man1/keytool.1.gz keytool.1.gz /usr/lib/jvm/java-17-oracle/man/man1/keytool.1.gz
+update-alternatives 2023-12-16 22:27:34: link group keytool updated to point to /usr/lib/jvm/java-17-oracle/bin/keytool
+update-alternatives 2023-12-16 22:27:34: run with --install /usr/bin/rmiregistry rmiregistry /usr/lib/jvm/java-17-oracle/bin/rmiregistry 1091 --slave /usr/share/man/man1/rmiregistry.1.gz rmiregistry.1.gz /usr/lib/jvm/java-17-oracle/man/man1/rmiregistry.1.gz
+update-alternatives 2023-12-16 22:27:34: link group rmiregistry updated to point to /usr/lib/jvm/java-17-oracle/bin/rmiregistry
+update-alternatives 2023-12-16 22:27:34: run with --install /usr/bin/serialver serialver /usr/lib/jvm/java-17-oracle/bin/serialver 1091 --slave /usr/share/man/man1/serialver.1.gz serialver.1.gz /usr/lib/jvm/java-17-oracle/man/man1/serialver.1.gz
+update-alternatives 2023-12-16 22:27:34: link group serialver updated to point to /usr/lib/jvm/java-17-oracle/bin/serialver
+update-alternatives 2023-12-16 22:27:34: run with --install /usr/bin/jexec jexec /usr/lib/jvm/java-17-oracle/lib/jexec 1091 --slave /usr/share/binfmts/jar jexec-binfmt /usr/lib/jvm/java-17-oracle/lib/jar.binfmt
+update-alternatives 2023-12-16 22:27:34: link group jexec updated to point to /usr/lib/jvm/java-17-oracle/lib/jexec
+update-alternatives 2023-12-16 22:27:34: run with --install /usr/bin/jar jar /usr/lib/jvm/java-17-oracle/bin/jar 1091 --slave /usr/share/man/man1/jar.1.gz jar.1.gz /usr/lib/jvm/java-17-oracle/man/man1/jar.1.gz
+update-alternatives 2023-12-16 22:27:34: run with --install /usr/bin/jarsigner jarsigner /usr/lib/jvm/java-17-oracle/bin/jarsigner 1091 --slave /usr/share/man/man1/jarsigner.1.gz jarsigner.1.gz /usr/lib/jvm/java-17-oracle/man/man1/jarsigner.1.gz
+update-alternatives 2023-12-16 22:27:34: run with --install /usr/bin/java java /usr/lib/jvm/java-17-oracle/bin/java 1091 --slave /usr/share/man/man1/java.1.gz java.1.gz /usr/lib/jvm/java-17-oracle/man/man1/java.1.gz
+update-alternatives 2023-12-16 22:27:34: run with --install /usr/bin/javac javac /usr/lib/jvm/java-17-oracle/bin/javac 1091 --slave /usr/share/man/man1/javac.1.gz javac.1.gz /usr/lib/jvm/java-17-oracle/man/man1/javac.1.gz
+update-alternatives 2023-12-16 22:27:34: run with --install /usr/bin/javadoc javadoc /usr/lib/jvm/java-17-oracle/bin/javadoc 1091 --slave /usr/share/man/man1/javadoc.1.gz javadoc.1.gz /usr/lib/jvm/java-17-oracle/man/man1/javadoc.1.gz
+update-alternatives 2023-12-16 22:27:34: run with --install /usr/bin/javap javap /usr/lib/jvm/java-17-oracle/bin/javap 1091 --slave /usr/share/man/man1/javap.1.gz javap.1.gz /usr/lib/jvm/java-17-oracle/man/man1/javap.1.gz
+update-alternatives 2023-12-16 22:27:34: run with --install /usr/bin/jcmd jcmd /usr/lib/jvm/java-17-oracle/bin/jcmd 1091 --slave /usr/share/man/man1/jcmd.1.gz jcmd.1.gz /usr/lib/jvm/java-17-oracle/man/man1/jcmd.1.gz
+update-alternatives 2023-12-16 22:27:34: run with --install /usr/bin/jconsole jconsole /usr/lib/jvm/java-17-oracle/bin/jconsole 1091 --slave /usr/share/man/man1/jconsole.1.gz jconsole.1.gz /usr/lib/jvm/java-17-oracle/man/man1/jconsole.1.gz
+update-alternatives 2023-12-16 22:27:34: run with --install /usr/bin/jdb jdb /usr/lib/jvm/java-17-oracle/bin/jdb 1091 --slave /usr/share/man/man1/jdb.1.gz jdb.1.gz /usr/lib/jvm/java-17-oracle/man/man1/jdb.1.gz
+update-alternatives 2023-12-16 22:27:34: run with --install /usr/bin/jdeprscan jdeprscan /usr/lib/jvm/java-17-oracle/bin/jdeprscan 1091 --slave /usr/share/man/man1/jdeprscan.1.gz jdeprscan.1.gz /usr/lib/jvm/java-17-oracle/man/man1/jdeprscan.1.gz
+update-alternatives 2023-12-16 22:27:34: run with --install /usr/bin/jdeps jdeps /usr/lib/jvm/java-17-oracle/bin/jdeps 1091 --slave /usr/share/man/man1/jdeps.1.gz jdeps.1.gz /usr/lib/jvm/java-17-oracle/man/man1/jdeps.1.gz
+update-alternatives 2023-12-16 22:27:34: run with --install /usr/bin/jfr jfr /usr/lib/jvm/java-17-oracle/bin/jfr 1091 --slave /usr/share/man/man1/jfr.1.gz jfr.1.gz /usr/lib/jvm/java-17-oracle/man/man1/jfr.1.gz
+update-alternatives 2023-12-16 22:27:34: run with --install /usr/bin/jhsdb jhsdb /usr/lib/jvm/java-17-oracle/bin/jhsdb 1091 --slave /usr/share/man/man1/jhsdb.1.gz jhsdb.1.gz /usr/lib/jvm/java-17-oracle/man/man1/jhsdb.1.gz
+update-alternatives 2023-12-16 22:27:34: run with --install /usr/bin/jinfo jinfo /usr/lib/jvm/java-17-oracle/bin/jinfo 1091 --slave /usr/share/man/man1/jinfo.1.gz jinfo.1.gz /usr/lib/jvm/java-17-oracle/man/man1/jinfo.1.gz
+update-alternatives 2023-12-16 22:27:34: run with --install /usr/bin/jlink jlink /usr/lib/jvm/java-17-oracle/bin/jlink 1091 --slave /usr/share/man/man1/jlink.1.gz jlink.1.gz /usr/lib/jvm/java-17-oracle/man/man1/jlink.1.gz
+update-alternatives 2023-12-16 22:27:34: run with --install /usr/bin/jmap jmap /usr/lib/jvm/java-17-oracle/bin/jmap 1091 --slave /usr/share/man/man1/jmap.1.gz jmap.1.gz /usr/lib/jvm/java-17-oracle/man/man1/jmap.1.gz
+update-alternatives 2023-12-16 22:27:34: run with --install /usr/bin/jmod jmod /usr/lib/jvm/java-17-oracle/bin/jmod 1091 --slave /usr/share/man/man1/jmod.1.gz jmod.1.gz /usr/lib/jvm/java-17-oracle/man/man1/jmod.1.gz
+update-alternatives 2023-12-16 22:27:34: run with --install /usr/bin/jpackage jpackage /usr/lib/jvm/java-17-oracle/bin/jpackage 1091 --slave /usr/share/man/man1/jpackage.1.gz jpackage.1.gz /usr/lib/jvm/java-17-oracle/man/man1/jpackage.1.gz
+update-alternatives 2023-12-16 22:27:34: run with --install /usr/bin/jps jps /usr/lib/jvm/java-17-oracle/bin/jps 1091 --slave /usr/share/man/man1/jps.1.gz jps.1.gz /usr/lib/jvm/java-17-oracle/man/man1/jps.1.gz
+update-alternatives 2023-12-16 22:27:34: run with --install /usr/bin/jrunscript jrunscript /usr/lib/jvm/java-17-oracle/bin/jrunscript 1091 --slave /usr/share/man/man1/jrunscript.1.gz jrunscript.1.gz /usr/lib/jvm/java-17-oracle/man/man1/jrunscript.1.gz
+update-alternatives 2023-12-16 22:27:34: run with --install /usr/bin/jshell jshell /usr/lib/jvm/java-17-oracle/bin/jshell 1091 --slave /usr/share/man/man1/jshell.1.gz jshell.1.gz /usr/lib/jvm/java-17-oracle/man/man1/jshell.1.gz
+update-alternatives 2023-12-16 22:27:34: run with --install /usr/bin/jstack jstack /usr/lib/jvm/java-17-oracle/bin/jstack 1091 --slave /usr/share/man/man1/jstack.1.gz jstack.1.gz /usr/lib/jvm/java-17-oracle/man/man1/jstack.1.gz
+update-alternatives 2023-12-16 22:27:34: run with --install /usr/bin/jstat jstat /usr/lib/jvm/java-17-oracle/bin/jstat 1091 --slave /usr/share/man/man1/jstat.1.gz jstat.1.gz /usr/lib/jvm/java-17-oracle/man/man1/jstat.1.gz
+update-alternatives 2023-12-16 22:27:34: run with --install /usr/bin/jstatd jstatd /usr/lib/jvm/java-17-oracle/bin/jstatd 1091 --slave /usr/share/man/man1/jstatd.1.gz jstatd.1.gz /usr/lib/jvm/java-17-oracle/man/man1/jstatd.1.gz
+update-alternatives 2023-12-16 22:27:34: run with --install /usr/bin/keytool keytool /usr/lib/jvm/java-17-oracle/bin/keytool 1091 --slave /usr/share/man/man1/keytool.1.gz keytool.1.gz /usr/lib/jvm/java-17-oracle/man/man1/keytool.1.gz
+update-alternatives 2023-12-16 22:27:34: run with --install /usr/bin/rmiregistry rmiregistry /usr/lib/jvm/java-17-oracle/bin/rmiregistry 1091 --slave /usr/share/man/man1/rmiregistry.1.gz rmiregistry.1.gz /usr/lib/jvm/java-17-oracle/man/man1/rmiregistry.1.gz
+update-alternatives 2023-12-16 22:27:34: run with --install /usr/bin/serialver serialver /usr/lib/jvm/java-17-oracle/bin/serialver 1091 --slave /usr/share/man/man1/serialver.1.gz serialver.1.gz /usr/lib/jvm/java-17-oracle/man/man1/serialver.1.gz
+update-alternatives 2023-12-16 22:27:35: run with --quiet --auto jar
+update-alternatives 2023-12-16 22:27:35: run with --quiet --auto jarsigner
+update-alternatives 2023-12-16 22:27:35: run with --quiet --auto java
+update-alternatives 2023-12-16 22:27:35: run with --quiet --auto javac
+update-alternatives 2023-12-16 22:27:35: run with --quiet --auto javadoc
+update-alternatives 2023-12-16 22:27:35: run with --quiet --auto javap
+update-alternatives 2023-12-16 22:27:35: run with --quiet --auto jcmd
+update-alternatives 2023-12-16 22:27:35: run with --quiet --auto jconsole
+update-alternatives 2023-12-16 22:27:35: run with --quiet --auto jdb
+update-alternatives 2023-12-16 22:27:35: run with --quiet --auto jdeprscan
+update-alternatives 2023-12-16 22:27:35: run with --quiet --auto jdeps
+update-alternatives 2023-12-16 22:27:35: run with --quiet --auto jexec
+update-alternatives 2023-12-16 22:27:35: run with --quiet --auto jfr
+update-alternatives 2023-12-16 22:27:35: run with --quiet --auto jhsdb
+update-alternatives 2023-12-16 22:27:35: run with --quiet --auto jimage
+update-alternatives 2023-12-16 22:27:35: run with --quiet --auto jinfo
+update-alternatives 2023-12-16 22:27:35: run with --quiet --auto jlink
+update-alternatives 2023-12-16 22:27:35: run with --quiet --auto jmap
+update-alternatives 2023-12-16 22:27:35: run with --quiet --auto jmod
+update-alternatives 2023-12-16 22:27:35: run with --quiet --auto jpackage
+update-alternatives 2023-12-16 22:27:35: run with --quiet --auto jps
+update-alternatives 2023-12-16 22:27:35: run with --quiet --auto jrunscript
+update-alternatives 2023-12-16 22:27:35: run with --quiet --auto jshell
+update-alternatives 2023-12-16 22:27:35: run with --quiet --auto jstack
+update-alternatives 2023-12-16 22:27:35: run with --quiet --auto jstat
+update-alternatives 2023-12-16 22:27:35: run with --quiet --auto jstatd
+update-alternatives 2023-12-16 22:27:35: run with --quiet --auto keytool
+update-alternatives 2023-12-16 22:27:35: run with --quiet --auto rmiregistry
+update-alternatives 2023-12-16 22:27:35: run with --quiet --auto serialver
+update-alternatives 2023-12-16 22:27:35: run with --quiet --set jar /usr/lib/jvm/java-17-oracle/bin/jar
+update-alternatives 2023-12-16 22:27:35: status of link group /usr/bin/jar set to manual
+update-alternatives 2023-12-16 22:27:35: run with --quiet --set jarsigner /usr/lib/jvm/java-17-oracle/bin/jarsigner
+update-alternatives 2023-12-16 22:27:35: status of link group /usr/bin/jarsigner set to manual
+update-alternatives 2023-12-16 22:27:35: run with --quiet --set java /usr/lib/jvm/java-17-oracle/bin/java
+update-alternatives 2023-12-16 22:27:35: status of link group /usr/bin/java set to manual
+update-alternatives 2023-12-16 22:27:35: run with --quiet --set javac /usr/lib/jvm/java-17-oracle/bin/javac
+update-alternatives 2023-12-16 22:27:35: status of link group /usr/bin/javac set to manual
+update-alternatives 2023-12-16 22:27:35: run with --quiet --set javadoc /usr/lib/jvm/java-17-oracle/bin/javadoc
+update-alternatives 2023-12-16 22:27:35: status of link group /usr/bin/javadoc set to manual
+update-alternatives 2023-12-16 22:27:35: run with --quiet --set javap /usr/lib/jvm/java-17-oracle/bin/javap
+update-alternatives 2023-12-16 22:27:35: status of link group /usr/bin/javap set to manual
+update-alternatives 2023-12-16 22:27:35: run with --quiet --set jcmd /usr/lib/jvm/java-17-oracle/bin/jcmd
+update-alternatives 2023-12-16 22:27:35: status of link group /usr/bin/jcmd set to manual
+update-alternatives 2023-12-16 22:27:35: run with --quiet --set jconsole /usr/lib/jvm/java-17-oracle/bin/jconsole
+update-alternatives 2023-12-16 22:27:35: status of link group /usr/bin/jconsole set to manual
+update-alternatives 2023-12-16 22:27:35: run with --quiet --set jdb /usr/lib/jvm/java-17-oracle/bin/jdb
+update-alternatives 2023-12-16 22:27:35: status of link group /usr/bin/jdb set to manual
+update-alternatives 2023-12-16 22:27:35: run with --quiet --set jdeprscan /usr/lib/jvm/java-17-oracle/bin/jdeprscan
+update-alternatives 2023-12-16 22:27:35: status of link group /usr/bin/jdeprscan set to manual
+update-alternatives 2023-12-16 22:27:35: run with --quiet --set jdeps /usr/lib/jvm/java-17-oracle/bin/jdeps
+update-alternatives 2023-12-16 22:27:35: status of link group /usr/bin/jdeps set to manual
+update-alternatives 2023-12-16 22:27:35: run with --quiet --set jexec /usr/lib/jvm/java-17-oracle/lib/jexec
+update-alternatives 2023-12-16 22:27:35: status of link group /usr/bin/jexec set to manual
+update-alternatives 2023-12-16 22:27:35: run with --quiet --set jfr /usr/lib/jvm/java-17-oracle/bin/jfr
+update-alternatives 2023-12-16 22:27:35: status of link group /usr/bin/jfr set to manual
+update-alternatives 2023-12-16 22:27:35: run with --quiet --set jhsdb /usr/lib/jvm/java-17-oracle/bin/jhsdb
+update-alternatives 2023-12-16 22:27:35: status of link group /usr/bin/jhsdb set to manual
+update-alternatives 2023-12-16 22:27:35: run with --quiet --set jimage /usr/lib/jvm/java-17-oracle/bin/jimage
+update-alternatives 2023-12-16 22:27:35: status of link group /usr/bin/jimage set to manual
+update-alternatives 2023-12-16 22:27:35: run with --quiet --set jinfo /usr/lib/jvm/java-17-oracle/bin/jinfo
+update-alternatives 2023-12-16 22:27:35: status of link group /usr/bin/jinfo set to manual
+update-alternatives 2023-12-16 22:27:35: run with --quiet --set jlink /usr/lib/jvm/java-17-oracle/bin/jlink
+update-alternatives 2023-12-16 22:27:35: status of link group /usr/bin/jlink set to manual
+update-alternatives 2023-12-16 22:27:35: run with --quiet --set jmap /usr/lib/jvm/java-17-oracle/bin/jmap
+update-alternatives 2023-12-16 22:27:35: status of link group /usr/bin/jmap set to manual
+update-alternatives 2023-12-16 22:27:35: run with --quiet --set jmod /usr/lib/jvm/java-17-oracle/bin/jmod
+update-alternatives 2023-12-16 22:27:35: status of link group /usr/bin/jmod set to manual
+update-alternatives 2023-12-16 22:27:35: run with --quiet --set jpackage /usr/lib/jvm/java-17-oracle/bin/jpackage
+update-alternatives 2023-12-16 22:27:35: status of link group /usr/bin/jpackage set to manual
+update-alternatives 2023-12-16 22:27:35: run with --quiet --set jps /usr/lib/jvm/java-17-oracle/bin/jps
+update-alternatives 2023-12-16 22:27:35: status of link group /usr/bin/jps set to manual
+update-alternatives 2023-12-16 22:27:35: run with --quiet --set jrunscript /usr/lib/jvm/java-17-oracle/bin/jrunscript
+update-alternatives 2023-12-16 22:27:35: status of link group /usr/bin/jrunscript set to manual
+update-alternatives 2023-12-16 22:27:35: run with --quiet --set jshell /usr/lib/jvm/java-17-oracle/bin/jshell
+update-alternatives 2023-12-16 22:27:35: status of link group /usr/bin/jshell set to manual
+update-alternatives 2023-12-16 22:27:35: run with --quiet --set jstack /usr/lib/jvm/java-17-oracle/bin/jstack
+update-alternatives 2023-12-16 22:27:35: status of link group /usr/bin/jstack set to manual
+update-alternatives 2023-12-16 22:27:35: run with --quiet --set jstat /usr/lib/jvm/java-17-oracle/bin/jstat
+update-alternatives 2023-12-16 22:27:35: status of link group /usr/bin/jstat set to manual
+update-alternatives 2023-12-16 22:27:35: run with --quiet --set jstatd /usr/lib/jvm/java-17-oracle/bin/jstatd
+update-alternatives 2023-12-16 22:27:35: status of link group /usr/bin/jstatd set to manual
+update-alternatives 2023-12-16 22:27:35: run with --quiet --set keytool /usr/lib/jvm/java-17-oracle/bin/keytool
+update-alternatives 2023-12-16 22:27:35: status of link group /usr/bin/keytool set to manual
+update-alternatives 2023-12-16 22:27:35: run with --quiet --set rmiregistry /usr/lib/jvm/java-17-oracle/bin/rmiregistry
+update-alternatives 2023-12-16 22:27:35: status of link group /usr/bin/rmiregistry set to manual
+update-alternatives 2023-12-16 22:27:35: run with --quiet --set serialver /usr/lib/jvm/java-17-oracle/bin/serialver
+update-alternatives 2023-12-16 22:27:35: status of link group /usr/bin/serialver set to manual
+update-alternatives 2024-02-02 04:27:45: run with --install /usr/bin/write write /usr/bin/write.ul 100 --slave /usr/share/man/man1/write.1.gz write.1.gz /usr/share/man/man1/write.ul.1.gz
+update-alternatives 2024-02-02 04:27:45: link group write updated to point to /usr/bin/write.ul

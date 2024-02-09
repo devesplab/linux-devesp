@@ -1,0 +1,110 @@
+<!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
+----
+
+=Add a new port to SELinux Configuration
+
+CREATED: Fri Nov  2 12:55:37 PDT 2012
+
+[root@revserver ~]# httpd -version
+Server version: Apache/2.2.15 (Unix)
+Server built:   Feb 13 2012 22:25:23
+
+:::::::::::::::
+
+Stop apache if it's running.
+
+[root@revserver ~]# service httpd stop
+Stopping httpd:                                            [  OK  ]
+
+List ports currently managed by SELinux.
+
+[root@revserver ~]# semanage port -l | grep -w http_port_t
+http_port_t                    tcp      80, 443, 488, 8008, 8009, 8443
+
+Create an Apache Virtual Host test configuration using a port not currently managed
+by SELinux. Use port 12345.
+
+[root@revserver ]# cat /etc/httpd/conf.d/porAddTest.conf 
+Listen 12345
+
+<VirtualHost revserver.homeoffice.wal-mart.com:12345>
+
+	ServerName svnserver.homeoffice.wal-mart.com
+	DocumentRoot /var/www/html
+
+</VirtualHost>
+[root@revserver ]#
+
+The apache server fails to start with a message indicating a problem with the port 12345.
+
+[root@revserver ~]# service httpd start
+Starting httpd: (13)Permission denied: make_sock: could not bind to address [::]:12345
+(13)Permission denied: make_sock: could not bind to address 0.0.0.0:12345
+no listening sockets available, shutting down
+Unable to open logs
+                                                           [FAILED]
+[root@revserver ~]#
+
+Add the port 12345 with the semanage command and list it to confirm.
+
+[root@revserver ~]# semanage port -a -t http_port_t -p tcp 12345
+[root@revserver ~]# semanage port -l | grep -w http_port_t
+http_port_t                    tcp      12345, 80, 443, 488, 8008, 8009, 8443
+
+Restart apache. This time it does come up.
+
+[root@revserver ~]# service httpd start
+Starting httpd: Apache/2.2.15 mod_ssl/2.2.15 (Pass Phrase Dialog)
+Some of your private key files are encrypted for security reasons.
+In order to read them you have to provide the pass phrases.
+
+Server svnserver.homeoffice.wal-mart.com:443 (RSA)
+Enter pass phrase:
+
+OK: Pass Phrase Dialog successful.
+                                                           [  OK  ]
+[root@revserver ~]# 
+
+Verify that httpd is listening for connections on port 12345.
+
+[root@revserver ~]# netstat -plant | grep httpd
+tcp        0      0 :::8008     :::*    LISTEN      9525/httpd          
+tcp        0      0 :::12345    :::*    LISTEN      9525/httpd          
+tcp        0      0 :::443      :::*    LISTEN      9525/httpd          
+[root@revserver ~]# 
+
+Verify with telnet that you can connect to the server via the port.
+
+[root@revserver ~]# telnet localhost 12345
+Trying ::1...
+Connected to localhost.
+Escape character is '^]'.
+^C
+Connection closed by foreign host.
+[root@revserver ~]# 
+
+Create a test file on the document root.
+
+[root@revserver ~]# cd /var/www/html
+[root@revserver html]# touch test3file
+[root@revserver html]# ls -lZ test3file
+-rw-r--r--. root   root   unconfined_u:object_r:httpd_sys_content_t:s0 test3file
+
+As a regular user attempt to get the file using the new port 12345.
+The last line of output indicates the file got saved.
+
+[jdoe@revserver MyTemp]$ wget http://revserver.homeoffice.wal-mart.com:12345/test3file
+--2012-11-02 10:59:52--  http://revserver.homeoffice.wal-mart.com:12345/test3file
+Resolving revserver.homeoffice.wal-mart.com... 172.29.22.149
+Connecting to revserver.homeoffice.wal-mart.com|172.29.22.149|:12345... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 0 [text/plain]
+Saving to: “test3file”
+    [ <=>                                                                                ] 0           --.-K/s   in 0s      
+2012-11-02 10:59:52 (0.00 B/s) - “test3file” saved [0/0]
+[jdoe@revserver MyTemp]$ 
+
+Test on a browser:	http://localhost:12345
+
+<!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
+----

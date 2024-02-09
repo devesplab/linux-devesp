@@ -1,0 +1,55 @@
+-> ls -lR
+.:
+total 72
+-rw-r--r-- 1 devuser devuser  3812 Feb  6 05:15 capitals1
+-rw-r--r-- 1 devuser devuser  7424 Feb  6 05:15 capitals2
+-rw-r--r-- 1 devuser devuser  3812 Feb  6 05:15 country_capital_v1.lst
+-rw-r--r-- 1 devuser devuser  7424 Feb  6 05:15 country_capital_v2.csv
+-rw-r--r-- 1 devuser devuser 21999 Feb  6 05:15 data_profile.odt
+drwxr-xr-x 3 devuser devuser  4096 Feb  6 05:15 dirOne/
+-rw-r--r-- 1 devuser devuser  3581 Feb  6 05:15 identicalFile1.txt
+-rw-r--r-- 1 devuser devuser  3581 Feb  6 05:15 identicalFile2.txt
+-rw-r--r-- 1 devuser devuser  3581 Feb  6 05:15 identicalFile3.txt
+-rw-r--r-- 1 devuser devuser   572 Feb  6 05:15 itemized_items.lst
+drwxr-xr-x 4 devuser devuser  4096 Feb  6 05:15 literature/
+
+./dirOne:
+total 36
+-rw-r--r-- 1 devuser devuser  291 Feb  6 05:15 afile005.yml
+-rw-r--r-- 1 devuser devuser  210 Feb  6 05:15 afile01a.yml
+-rw-r--r-- 1 devuser devuser 7813 Feb  6 05:15 afile02a.txt
+-rw-r--r-- 1 devuser devuser  325 Feb  6 05:15 afile02a.yaml
+-rw-r--r-- 1 devuser devuser  325 Feb  6 05:15 afile02b.json
+-rw-r--r-- 1 devuser devuser 7813 Feb  6 05:15 afile03a.txt
+drwxr-xr-x 2 devuser devuser 4096 Feb  6 05:15 subdir2/
+
+./dirOne/subdir2:
+total 0
+-rw-r--r-- 1 devuser devuser 0 Feb  6 05:15 records.dat
+-rw-r--r-- 1 devuser devuser 0 Feb  6 05:15 students.lst
+
+./literature:
+total 8
+drwxr-xr-x 2 devuser devuser 4096 Feb  6 05:15 esopo/
+drwxr-xr-x 2 devuser devuser 4096 Feb  6 05:15 quixote/
+
+./literature/esopo:
+total 28
+-rw-r--r-- 1 devuser devuser 1009 Feb  6 05:15  esopo_01_elRatonYLaRana.txt
+-rw-r--r-- 1 devuser devuser 1598 Feb  6 05:15 'esopo_02_ElRato'$'\314\201''nCampesinoyElRato'$'\314\201''nCortesano.txt'
+-rw-r--r-- 1 devuser devuser 1014 Feb  6 05:15  esopo_03_LosRatonesyLasComadrejas.txt
+-rw-r--r-- 1 devuser devuser  826 Feb  6 05:15  esopo_04_ElGatoYLasRatas.txt
+-rw-r--r-- 1 devuser devuser  843 Feb  6 05:15  esopo_06_ElCisneYSuDueno.txt
+-rw-r--r-- 1 devuser devuser  832 Feb  6 05:15  esopo_07_ElCisneTomadoPorGanso
+-rw-r--r-- 1 devuser devuser 1149 Feb  6 05:15 'esopo_08_LaVi'$'\314\201''boraYLaCulebraDeAgua.txt'
+
+./literature/quixote:
+total 1800
+-rwxr-xr-x 1 devuser devuser   3573 Feb  6 05:15 cuento_de_nada.txt*
+-rwxr-xr-x 1 devuser devuser 270863 Feb  6 05:15 don-quixote-118.jpg*
+-rwxr-xr-x 1 devuser devuser 227917 Feb  6 05:15 don-quixote-142.jpg*
+-rwxr-xr-x 1 devuser devuser 297161 Feb  6 05:15 don-quixote-36.jpg*
+-rwxr-xr-x 1 devuser devuser 289020 Feb  6 05:15 don-quixote-39.jpg*
+-rwxr-xr-x 1 devuser devuser 302154 Feb  6 05:15 don-quixote-40.jpg*
+-rwxr-xr-x 1 devuser devuser 195802 Feb  6 05:15 don-quixote-43.jpg*
+-rwxr-xr-x 1 devuser devuser 243619 Feb  6 05:15 don-quixote-75.jpg*

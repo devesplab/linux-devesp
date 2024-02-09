@@ -1,0 +1,114 @@
+[
+  {
+    "id": "65bece628d3a0ffce81c8c63",
+    "email": "manning_york@keeg.gu",
+    "roles": [
+      "guest"
+    ],
+    "apiKey": "3b03cf12-1017-4a77-82dc-8009b092695e",
+    "profile": {
+      "dob": "1991-10-01",
+      "name": "Manning York",
+      "about": "Duis labore quis enim ullamco et proident cupidatat sunt sunt proident. Anim sunt aliqua nostrud duis irure excepteur consequat tempor.",
+      "address": "89 Dahl Court, Sparkill, Montana",
+      "company": "Keeg",
+      "location": {
+        "lat": 73.376837,
+        "long": 10.256617
+      }
+    },
+    "username": "manning91",
+    "createdAt": "2013-06-02T05:49:54.741Z",
+    "updatedAt": "2013-06-03T05:49:54.741Z"
+  },
+  {
+    "id": "65bece62bbf105515321ca38",
+    "email": "mann_barlow@organic.london",
+    "roles": [
+      "member",
+      "owner"
+    ],
+    "apiKey": "9e0d6d6c-510b-4bde-b75e-339eac40ae95",
+    "profile": {
+      "dob": "1990-12-21",
+      "name": "Mann Barlow",
+      "about": "Labore est proident occaecat elit fugiat. Amet ad aute proident excepteur elit ea.",
+      "address": "85 Union Street, Maplewood, Nebraska",
+      "company": "Organica",
+      "location": {
+        "lat": 17.221715,
+        "long": 138.001698
+      }
+    },
+    "username": "mann90",
+    "createdAt": "2012-03-09T03:16:08.725Z",
+    "updatedAt": "2012-03-10T03:16:08.725Z"
+  },
+  {
+    "id": "65bece624e5e4fc973fe8ee1",
+    "email": "paula_humphrey@sulfax.gold",
+    "roles": [
+      "guest",
+      "owner"
+    ],
+    "apiKey": "75eaed32-fbd6-49f7-b22b-2ef192322386",
+    "profile": {
+      "dob": "1990-04-15",
+      "name": "Paula Humphrey",
+      "about": "Dolore minim ad irure labore id labore irure sunt. In minim do tempor laboris tempor aliqua pariatur aliqua Lorem.",
+      "address": "14 Brown Street, Morgandale, New Hampshire",
+      "company": "Sulfax",
+      "location": {
+        "lat": -32.037817,
+        "long": -122.570641
+      }
+    },
+    "username": "paula90",
+    "createdAt": "2013-05-02T21:42:49.860Z",
+    "updatedAt": "2013-05-03T21:42:49.860Z"
+  },
+  {
+    "id": "65bece625ea36f58f74c04ee",
+    "email": "carla_reed@knowlysis.bnpparibas",
+    "roles": [
+      "admin"
+    ],
+    "apiKey": "f194faf7-7272-4f66-aa6b-6bd2b2bbe11b",
+    "profile": {
+      "dob": "1993-04-10",
+      "name": "Carla Reed",
+      "about": "Elit non cillum aute deserunt cillum tempor. Cupidatat ut sunt officia est aute aliqua dolor.",
+      "address": "28 Tillary Street, Soham, Alaska",
+      "company": "Knowlysis",
+      "location": {
+        "lat": -5.139991,
+        "long": 36.697304
+      }
+    },
+    "username": "carla93",
+    "createdAt": "2013-10-08T07:36:35.622Z",
+    "updatedAt": "2013-10-09T07:36:35.622Z"
+  },
+  {
+    "id": "65bece621b1648307a74e967",
+    "email": "weiss_suarez@ersum.crs",
+    "roles": [
+      "admin"
+    ],
+    "apiKey": "cd74dee1-f906-40c5-841e-634c15096988",
+    "profile": {
+      "dob": "1988-06-24",
+      "name": "Weiss Suarez",
+      "about": "Ex veniam laboris aute adipisicing labore commodo eiusmod enim aliquip exercitation ad. Et elit id nisi veniam consequat enim.",
+      "address": "49 Emerald Street, Fairacres, District Of Columbia",
+      "company": "Ersum",
+      "location": {
+        "lat": -18.174563,
+        "long": 107.335735
+      }
+    },
+    "username": "weiss88",
+    "createdAt": "2010-05-06T09:08:59.647Z",
+    "updatedAt": "2010-05-07T09:08:59.647Z"
+  }
+]
