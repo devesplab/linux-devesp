@@ -1,5 +1,0 @@
-# pezcado
-tuna,pez,agua 
-tiburon, pez, agua
-delfin, pez, agua
-ballena, pez agua

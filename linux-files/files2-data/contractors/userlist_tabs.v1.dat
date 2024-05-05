@@ -1,9 +1,0 @@
-#user	    workstation	    passcode    title		    residence
-jdoe	    unix		    111111	    programmer	    california
-dan	        unix		    111112	    programmer	    california
-peter	    windows		    111113	    developer	    nevada
-john	    mac		        111114	    staff		    nevada
-mark	    mac		        222111	    accountant	    washington
-lloyd	    mac		        222111	    accountant	    oregon
-marc	    linux		    222221	    programmer	    california
-leo	        linux		    222223	    programmer	    california
