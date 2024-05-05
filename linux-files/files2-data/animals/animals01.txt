@@ -1,0 +1,5 @@
+# mascotas
+gato felino tierra
+perro canino tierra
+caballo,equino,tierra
+culebra,reptil,tierra

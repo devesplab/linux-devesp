@@ -1,0 +1,21 @@
+# subnet 198.168.20.0/16:
+Hostname: host1, IP address: 198.168.20.1, Subnet mask: 255.255.0.0, Broadcast address: 198.168.255.255
+Hostname: host2, IP address: 198.168.20.2, Subnet mask: 255.255.0.0, Broadcast address: 198.168.255.255
+Hostname: host3, IP address: 198.168.20.3, Subnet mask: 255.255.0.0, Broadcast address: 198.168.255.255
+Hostname: host4, IP address: 198.168.20.4, Subnet mask: 255.255.0.0, Broadcast address: 198.168.255.255
+Hostname: host5, IP address: 198.168.20.5, Subnet mask: 255.255.0.0, Broadcast address: 198.168.255.255
+Hostname: host6, IP address: 198.168.20.6, Subnet mask: 255.255.0.0, Broadcast address: 198.168.255.255
+Hostname: host7, IP address: 198.168.20.7, Subnet mask: 255.255.0.0, Broadcast address: 198.168.255.255
+Hostname: host8, IP address: 198.168.20.8, Subnet mask: 255.255.0.0, Broadcast address: 198.168.255.255
+Hostname: host9, IP address: 198.168.20.9, Subnet mask: 255.255.0.0, Broadcast address: 198.168.255.255
+Hostname: host10, IP address: 198.168.20.10, Subnet mask: 255.255.0.0, Broadcast address: 198.168.255.255
+Hostname: host11, IP address: 198.168.20.11, Subnet mask: 255.255.0.0, Broadcast address: 198.168.255.255
+Hostname: host12, IP address: 198.168.20.12, Subnet mask: 255.255.0.0, Broadcast address: 198.168.255.255
+Hostname: host13, IP address: 198.168.20.13, Subnet mask: 255.255.0.0, Broadcast address: 198.168.255.255
+Hostname: host14, IP address: 198.168.20.14, Subnet mask: 255.255.0.0, Broadcast address: 198.168.255.255
+Hostname: host15, IP address: 198.168.20.15, Subnet mask: 255.255.0.0, Broadcast address: 198.168.255.255
+Hostname: host16, IP address: 198.168.20.16, Subnet mask: 255.255.0.0, Broadcast address: 198.168.255.255
+Hostname: host17, IP address: 198.168.20.17, Subnet mask: 255.255.0.0, Broadcast address: 198.168.255.255
+Hostname: host18, IP address: 198.168.20.18, Subnet mask: 255.255.0.0, Broadcast address: 198.168.255.255
+Hostname: host19, IP address: 198.168.20.19, Subnet mask: 255.255.0.0, Broadcast address: 198.168.255.255
+Hostname: host20, IP address: 198.168.20.20, Subnet mask: 255.255.0.0, Broadcast address: 198.168.255.255
